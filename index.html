@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แผนกวิชาเทคโนโลยีคอมพิวเตอร์ - Computer Tech</title>
-    <!-- ฟอนต์ Google Fonts: Prompt -->
+    <title>แผนกวิชาช่างเทคนิคคอมพิวเตอร์ - วิทยาลัยเทคนิคตรัง</title>
+    <!-- Google Fonts: Prompt -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,43 +15,42 @@
         }
 
         body {
-            background-color: #F8FAFC; /* พื้นหลังสีขาวอมเทาสบายตา */
+            background-color: #F8FAFC;
             color: #334155;
             line-height: 1.6;
         }
 
-        /* ===== แถบเมนูด้านบน (HEADER & NAVBAR) ===== */
+        /* ===== NAVIGATION BAR ===== */
         header {
-            background-color: #0F172A; /* สีน้ำเงินเข้มหรูหรา */
+            background-color: #0F172A;
             color: #FFFFFF;
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #D4AF37; /* ขอบเน้นสีเหลืองทอง */
+            border-bottom: 3px solid #D4AF37;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .logo-box {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .logo-img {
-            height: 52px;
-            width: 52px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #D4AF37; /* เส้นขอบรูปสีทอง */
-            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+            border: 2px solid #D4AF37;
         }
 
         .logo-text h2 {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: #FFFFFF;
             line-height: 1.2;
@@ -59,69 +58,44 @@
 
         .logo-text p {
             font-size: 0.8rem;
-            color: #38BDF8; /* สีฟ้าอ่อน */
+            color: #38BDF8;
             font-weight: 300;
         }
 
         nav a {
             color: #FFFFFF;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 22px;
             font-weight: 400;
             font-size: 0.95rem;
             transition: all 0.3s ease;
         }
 
         nav a:hover {
-            color: #38BDF8; /* ไฮไลต์สีฟ้าเมื่อชี้ */
+            color: #38BDF8;
         }
 
-        /* ===== ส่วนต้อนรับ (HERO BANNER) ===== */
-        .hero {
-            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #0284C7 100%);
-            color: white;
-            padding: 90px 5%;
+        /* ===== HERO BANNER SECTION ===== */
+        .hero-banner-container {
+            width: 100%;
+            background-color: #0F172A;
+            padding: 20px 5%;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        .hero-banner-img {
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+            border-radius: 16px;
+            border: 2px solid #D4AF37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            object-fit: cover;
         }
 
-        .hero p {
-            color: #E0F2FE;
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            font-weight: 300;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
-            color: #0F172A;
-            padding: 12px 35px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-        }
-
-        /* ===== ส่วนเนื้อหาหลัก ===== */
+        /* ===== CONTAINER & SECTION TITLES ===== */
         .container {
-            padding: 70px 5%;
+            padding: 60px 5%;
             max-width: 1200px;
             margin: auto;
         }
@@ -129,165 +103,303 @@
         .section-title {
             text-align: center;
             color: #0F172A;
-            font-size: 2.1rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             position: relative;
         }
 
         .section-title::after {
             content: '';
-            width: 70px;
+            width: 80px;
             height: 4px;
-            background-color: #D4AF37;
+            background: linear-gradient(90deg, #D4AF37, #38BDF8);
             display: block;
-            margin: 12px auto 0;
+            margin: 10px auto 0;
             border-radius: 2px;
         }
 
-        /* ===== การ์ดแสดงข้อมูล ===== */
-        .grid {
+        /* ===== ABOUT SECTION (2-COLUMNS) ===== */
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
+            align-items: center;
         }
 
-        .card {
+        .about-card {
             background: #FFFFFF;
-            padding: 35px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid #38BDF8; /* เส้นขอบฟ้าอ่อน */
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-top: 4px solid #D4AF37;
+            transition: transform 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .about-card-body {
+            padding: 25px;
+        }
+
+        .about-card-body h3 {
+            color: #0F172A;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .about-card-body p {
+            color: #64748B;
+            font-size: 0.95rem;
+        }
+
+        /* ===== PRACTICAL LEARNING GRID (4 CARDS) ===== */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .practice-card {
+            background: #FFFFFF;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border: 1px solid #E2E8F0;
             transition: all 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+        .practice-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+            border-color: #38BDF8;
         }
 
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #D4AF37;
+        .practice-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .card h3 {
+        .practice-card-content {
+            padding: 20px;
+        }
+
+        .practice-card-content h4 {
             color: #0F172A;
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
-        .card p {
+        .practice-card-content p {
             color: #64748B;
+            font-size: 0.88rem;
+        }
+
+        /* ===== SPECIAL EVENT FEATURE ===== */
+        .event-banner {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+            border-radius: 20px;
+            padding: 35px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+            border: 1px solid #D4AF37;
+        }
+
+        .event-img {
+            flex: 1 1 400px;
+            max-width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #D4AF37;
+        }
+
+        .event-info {
+            flex: 1 1 350px;
+        }
+
+        .event-tag {
+            background-color: #D4AF37;
+            color: #0F172A;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .event-info h3 {
+            font-size: 1.6rem;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .event-info p {
+            color: #E0F2FE;
             font-size: 0.95rem;
             line-height: 1.7;
         }
 
-        /* ===== ส่วนท้ายเว็บ (FOOTER) ===== */
+        /* ===== FOOTER ===== */
         footer {
             background-color: #0F172A;
             color: #94A3B8;
             text-align: center;
             padding: 35px 5%;
             font-size: 0.9rem;
-            border-top: 1px solid #1E293B;
-        }
-
-        footer p {
-            margin-bottom: 8px;
+            border-top: 3px solid #D4AF37;
         }
 
         footer strong {
             color: #38BDF8;
         }
 
-        /* รองรับการแสดงผลบนมือถือ */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 gap: 15px;
-                text-align: center;
             }
             nav a {
-                margin: 0 10px;
+                margin: 0 8px;
             }
-            .hero h1 {
-                font-size: 2rem;
+            .event-banner {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- แถบเมนูและโลโก้ -->
+    <!-- แถบเมนูบน -->
     <header>
         <div class="logo-box">
-            <!-- ตรวจสอบชื่อไฟล์รูปโลโก้ของคุณให้ตรงกัน (เช่น logo.jpg) -->
             <img src="logo.jpg" alt="โลโก้แผนก" class="logo-img">
             <div class="logo-text">
-                <h2>แผนกวิชาเทคโนโลยีคอมพิวเตอร์</h2>
-                <p>Computer Technology Department</p>
+                <h2>แผนกวิชาช่างเทคนิคคอมพิวเตอร์</h2>
+                <p>วิทยาลัยเทคนิคตรัง</p>
             </div>
         </div>
         <nav>
-            <a href="#home">หน้าแรก</a>
-            <a href="#about">เกี่ยวกับเรา</a>
-            <a href="#courses">หลักสูตร</a>
-            <a href="#contact">ติดต่อ</a>
+            <a href="#about">เกี่ยวกับแผนก</a>
+            <a href="#labs">ห้องปฏิบัติการ</a>
+            <a href="#practical">การฝึกปฏิบัติ</a>
+            <a href="#events">โครงการอบรม</a>
         </nav>
     </header>
 
-    <!-- ส่วนต้อนรับด้านบน -->
-    <section class="hero" id="home">
-        <h1>มุ่งสู่ความเป็นเลิศ ด้านนวัตกรรมดิจิทัล</h1>
-        <p>สร้างทักษะแห่งอนาคตด้วยหลักสูตรที่ทันสมัย พร้อมสู่การเป็นผู้เชี่ยวชาญด้านเทคโนโลยีอย่างมืออาชีพ</p>
-        <a href="#courses" class="btn-gold">ดูหลักสูตรการเรียน</a>
-    </section>
+    <!-- 1. แบนเนอร์หลัก (Hero Banner) -->
+    <div class="hero-banner-container">
+        <img src="hero-banner.jpg" alt="แบนเนอร์แผนกวิชาช่างเทคนิคคอมพิวเตอร์" class="hero-banner-img">
+    </div>
 
-    <!-- ส่วนจุดเด่น -->
+    <!-- 2. เกี่ยวกับแผนกวิชา & สิ่งอำนวยความสะดวก -->
     <div class="container" id="about">
-        <h2 class="section-title">จุดเด่นของแผนกวิชา</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon">💻</div>
-                <h3>อุปกรณ์ทันสมัย</h3>
-                <p>ห้องปฏิบัติการคอมพิวเตอร์พร้อมเครื่องมือ ซอฟต์แวร์ และระบบเครือข่ายมาตรฐานอุตสาหกรรม</p>
+        <h2 class="section-title">ยินดีต้อนรับสู่ TECHCOM</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <img src="welcome-sign.jpg" alt="ป้ายต้อนรับ TECHCOM">
+                <div class="about-card-body">
+                    <h3>สภาพแวดล้อมน่าเรียน</h3>
+                    <p>บรรยากาศภายในแผนกวิชาเป็นกันเอง พร้อมด้วยป้ายแนะนำและมุมพักผ่อนสำหรับนักศึกษา</p>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-icon">🎓</div>
-                <h3>คณาจารย์มืออาชีพ</h3>
-                <p>ถ่ายทอดความรู้และประสบการณ์ตรงจากผู้เชี่ยวชาญในสายงานเทคโนโลยีสารสนเทศ</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🚀</div>
-                <h3>เน้นการปฏิบัติจริง</h3>
-                <p>ฝึกฝนการสร้างสรรค์ผลงาน เตรียมความพร้อมสู่การทำงานจริงและการศึกษาต่ออย่างมั่นใจ</p>
+            <div class="about-card">
+                <img src="teacher-guide.jpg" alt="อาจารย์ให้คำแนะนำ">
+                <div class="about-card-body">
+                    <h3>คณาจารย์คอยดูแลใกล้ชิด</h3>
+                    <p>การเรียนการสอนเน้นการให้คำแนะนำแบบใกล้ชิด ถ่ายทอดทักษะวิชาชีพจากผู้เชี่ยวชาญ</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ส่วนหลักสูตร -->
-    <div class="container" id="courses">
-        <h2 class="section-title">หลักสูตรที่เปิดสอน</h2>
-        <div class="grid">
-            <div class="card" style="border-top-color: #D4AF37;">
-                <h3>ระดับ ปวช. (ประกาศนียบัตรวิชาชีพ)</h3>
-                <p>เน้นปูพื้นฐานงานระบบคอมพิวเตอร์ การเขียนโปรแกรมเบื้องต้น ระบบเครือข่าย และการซ่อมบำรุง</p>
+    <!-- 3. ส่วนห้องปฏิบัติการ (Labs & Facilities) -->
+    <div class="container" id="labs" style="padding-top: 0;">
+        <h2 class="section-title">ห้องปฏิบัติการมาตรฐาน</h2>
+        <div class="about-grid">
+            <div class="about-card" style="border-top-color: #38BDF8;">
+                <img src="lab-room.jpg" alt="ห้องปฏิบัติการเซิร์ฟเวอร์">
+                <div class="about-card-body">
+                    <h3>ระบบเครื่องมือและ Server Rack</h3>
+                    <p>พร้อมด้วยตู้ RACK อุปกรณ์สวิตช์ เครื่องมือช่าง และคอมพิวเตอร์สำหรับการทดลองจริง</p>
+                </div>
             </div>
-            <div class="card" style="border-top-color: #1E3A8A;">
-                <h3>ระดับ ปวส. (ประกาศนียบัตรวิชาชีพชั้นสูง)</h3>
-                <p>เจาะลึกการพัฒนาซอฟต์แวร์ เว็บแอปพลิเคชัน ระบบเครือข่ายขั้นสูง และเทคโนโลยีคลาวด์</p>
+            <div class="about-card" style="border-top-color: #38BDF8;">
+                <img src="classroom-overview.jpg" alt="บรรยากาศห้องเรียนรวม">
+                <div class="about-card-body">
+                    <h3>ห้องเรียนปฏิบัติการคอมพิวเตอร์</h3>
+                    <p>พื้นที่การเรียนรู้กว้างขวาง โต๊ะปฏิบัติการพร้อมระบบปลั๊กและสายสัญญาณเครือข่ายครบครัน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. ส่วนเน้นการฝึกปฏิบัติจริง (Practical Skills Grid) -->
+    <div class="container" id="practical">
+        <h2 class="section-title">มุ่งเน้นทักษะปฏิบัติจริง (Hands-On)</h2>
+        <div class="grid-4">
+            <div class="practice-card">
+                <img src="pc-repair-01.jpg" alt="งานซ่อมบำรุงคอมพิวเตอร์">
+                <div class="practice-card-content">
+                    <h4>การประกอบและซ่อมบำรุง PC</h4>
+                    <p>ฝึกใช้อุปกรณ์ช่าง ตรวจเช็กฮาร์ดแวร์ และเปลี่ยนชิ้นส่วนคอมพิวเตอร์</p>
+                </div>
+            </div>
+            <div class="practice-card">
+                <img src="pc-repair-02.jpg" alt="การต่อสายอุปกรณ์ฮาร์ดแวร์">
+                <div class="practice-card-content">
+                    <h4>การจัดสายและเชื่อมต่ออุปกรณ์</h4>
+                    <p>เรียนรู้การเดินสายพาวเวอร์ สายส่งข้อมูล และระบบระบายความร้อน</p>
+                </div>
+            </div>
+            <div class="practice-card">
+                <img src="network-lab-01.jpg" alt="การเข้าหัวสายแลน">
+                <div class="practice-card-content">
+                    <h4>งานระบบเครือข่าย (Cabling)</h4>
+                    <p>ฝึกปฏิบัติการเข้าหัวสาย UTP (LAN) และทดสอบสัญญาณเครือข่าย</p>
+                </div>
+            </div>
+            <div class="practice-card">
+                <img src="network-lab-02.jpg" alt="การทดสอบระบบ Network">
+                <div class="practice-card-content">
+                    <h4>การคอนฟิกและทดสอบสปีด</h4>
+                    <p>ทดสอบความเร็วอินเทอร์เน็ต และตั้งค่าอุปกรณ์ Network Switch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. โครงการอบรมยกระดับมาตรฐาน (Special Event) -->
+    <div class="container" id="events">
+        <div class="event-banner">
+            <img src="event-training.jpg" alt="โครงการฝึกอบรมช่างซ่อมไมโครคอมพิวเตอร์" class="event-img">
+            <div class="event-info">
+                <span class="event-tag">โครงการเด่น</span>
+                <h3>การฝึกอบรมมาตรฐานฝีมือแรงงาน</h3>
+                <p>ร่วมกับสำนักงานพัฒนาฝีมือแรงงานตรัง จัดโครงการฝึกอบรมหลักสูตรผู้ทดสอบมาตรฐานฝีมือแรงงาน สาขาช่างซ่อมไมโครคอมพิวเตอร์ ระดับ 1 เพื่อการันตีคุณภาพผู้เรียนสู่ตลาดแรงงาน</p>
             </div>
         </div>
     </div>
 
     <!-- ส่วนท้ายเว็บ -->
-    <footer id="contact">
-        <p><strong>แผนกวิชาเทคโนโลยีคอมพิวเตอร์</strong> | Computer Tech</p>
-        <p>อีเมล: computertech@school.ac.th | โทรศัพท์: 02-123-4567</p>
-        <p>&copy; 2026 สงวนลิขสิทธิ์โดย แผนกวิชาเทคโนโลยีคอมพิวเตอร์</p>
+    <footer>
+        <p><strong>แผนกวิชาช่างเทคนิคคอมพิวเตอร์ (Computer Technology)</strong></p>
+        <p>วิทยาลัยเทคนิคตรัง อาชีวศึกษาจังหวัดตรัง สำนักงานคณะกรรมการการอาชีวศึกษา</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Trang Technical College. All Rights Reserved.</p>
     </footer>
 
 </body>
