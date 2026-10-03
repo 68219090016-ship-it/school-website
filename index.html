@@ -2,10 +2,162 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>เว็บไซต์โรงเรียน</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนกวิชา - School Department</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+        body {
+            background-color: #F8FAFC;
+            color: #334155;
+        }
+        /* Navigation Bar */
+        header {
+            background-color: #0F172A; /* น้ำเงินเข้ม */
+            color: #FFFFFF;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #D4AF37; /* เส้นเน้นสีทอง */
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #38BDF8; /* ฟ้าอ่อนเมื่อชี้ */
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            color: #94A3B8;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+        .btn-gold {
+            background-color: #D4AF37; /* สีเหลืองทอง */
+            color: #0F172A;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-gold:hover {
+            background-color: #F59E0B;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Content Section */
+        .container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section-title {
+            text-align: center;
+            color: #0F172A;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: #D4AF37;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #38BDF8; /* ขอบบนสีฟ้าอ่อน */
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #0F172A;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0F172A;
+            color: #94A3B8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>ยินดีต้อนรับสู่เว็บไซต์โรงเรียน</h1>
-    <p>นี่คือเว็บไซต์แรกของฉันบน GitHub Pages</p>
+
+    <header>
+        <h2>แผนกวิชาคอมพิวเตอร์</h2>
+        <nav>
+            <a href="#">หน้าแรก</a>
+            <a href="#">เกี่ยวกับเรา</a>
+            <a href="#">หลักสูตร</a>
+            <a href="#">ติดต่อ</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>มุ่งมั่นพัฒนา ทันสมัย ใส่ใจคุณภาพ</h1>
+        <p>ยกระดับการศึกษาด้วยเทคโนโลยีและนวัตกรรมแห่งอนาคต</p>
+        <a href="#" class="btn-gold">ดูหลักสูตรการเรียน</a>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">หลักสูตรที่เปิดสอน</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>ระดับ ปวช.</h3>
+                <p>เน้นปูพื้นฐานทักษะวิชาชีพ ความรู้พื้นฐานด้านเทคโนโลยีและการปฏิบัติจริง</p>
+            </div>
+            <div class="card">
+                <h3>ระดับ ปวส.</h3>
+                <p>ต่อยอดความเชี่ยวชาญเฉพาะทาง พร้อมเข้าสู่ตลาดแรงงานและภาคอุตสาหกรรม</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 แผนกวิชาคอมพิวเตอร์ | สงวนลิขสิทธิ์
+    </footer>
+
 </body>
 </html>
