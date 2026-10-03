@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แผนกวิชา - School Department</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>แผนกวิชาเทคโนโลยีคอมพิวเตอร์ - Computer Tech</title>
+    <!-- ฟอนต์ Google Fonts: Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,151 +13,281 @@
             box-sizing: border-box;
             font-family: 'Prompt', sans-serif;
         }
+
         body {
-            background-color: #F8FAFC;
+            background-color: #F8FAFC; /* พื้นหลังสีขาวอมเทาสบายตา */
             color: #334155;
+            line-height: 1.6;
         }
-        /* Navigation Bar */
+
+        /* ===== แถบเมนูด้านบน (HEADER & NAVBAR) ===== */
         header {
-            background-color: #0F172A; /* น้ำเงินเข้ม */
+            background-color: #0F172A; /* สีน้ำเงินเข้มหรูหรา */
             color: #FFFFFF;
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #D4AF37; /* เส้นเน้นสีทอง */
+            border-bottom: 3px solid #D4AF37; /* ขอบเน้นสีเหลืองทอง */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #D4AF37; /* เส้นขอบรูปสีทอง */
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-text h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: #38BDF8; /* สีฟ้าอ่อน */
+            font-weight: 300;
+        }
+
         nav a {
             color: #FFFFFF;
             text-decoration: none;
-            margin-left: 20px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #38BDF8; /* ฟ้าอ่อนเมื่อชี้ */
+            margin-left: 25px;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
 
-        /* Hero Banner Section */
+        nav a:hover {
+            color: #38BDF8; /* ไฮไลต์สีฟ้าเมื่อชี้ */
+        }
+
+        /* ===== ส่วนต้อนรับ (HERO BANNER) ===== */
         .hero {
-            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #0284C7 100%);
             color: white;
-            padding: 80px 5%;
+            padding: 90px 5%;
             text-align: center;
         }
+
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
+            font-weight: 700;
             margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
+
         .hero p {
-            color: #94A3B8;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
+            color: #E0F2FE;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
         }
+
         .btn-gold {
-            background-color: #D4AF37; /* สีเหลืองทอง */
+            background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
             color: #0F172A;
-            padding: 12px 30px;
+            padding: 12px 35px;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
-            transition: 0.3s;
-        }
-        .btn-gold:hover {
-            background-color: #F59E0B;
+            display: inline-block;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* Content Section */
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        /* ===== ส่วนเนื้อหาหลัก ===== */
         .container {
-            padding: 60px 5%;
+            padding: 70px 5%;
             max-width: 1200px;
             margin: auto;
         }
+
         .section-title {
             text-align: center;
             color: #0F172A;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 45px;
             position: relative;
         }
+
         .section-title::after {
             content: '';
-            width: 60px;
+            width: 70px;
             height: 4px;
             background-color: #D4AF37;
             display: block;
-            margin: 10px auto 0;
+            margin: 12px auto 0;
             border-radius: 2px;
         }
 
-        /* Cards Grid */
+        /* ===== การ์ดแสดงข้อมูล ===== */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .card {
-            background: #FFFFFF;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            border-top: 4px solid #38BDF8; /* ขอบบนสีฟ้าอ่อน */
-            transition: 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            color: #0F172A;
-            margin-bottom: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        /* Footer */
+        .card {
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid #38BDF8; /* เส้นขอบฟ้าอ่อน */
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #D4AF37;
+        }
+
+        .card h3 {
+            color: #0F172A;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #64748B;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== ส่วนท้ายเว็บ (FOOTER) ===== */
         footer {
             background-color: #0F172A;
             color: #94A3B8;
             text-align: center;
-            padding: 20px;
+            padding: 35px 5%;
             font-size: 0.9rem;
+            border-top: 1px solid #1E293B;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer strong {
+            color: #38BDF8;
+        }
+
+        /* รองรับการแสดงผลบนมือถือ */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- แถบเมนูและโลโก้ -->
     <header>
-        <h2>แผนกวิชาคอมพิวเตอร์</h2>
+        <div class="logo-box">
+            <!-- ตรวจสอบชื่อไฟล์รูปโลโก้ของคุณให้ตรงกัน (เช่น logo.jpg) -->
+            <img src="logo.jpg" alt="โลโก้แผนก" class="logo-img">
+            <div class="logo-text">
+                <h2>แผนกวิชาเทคโนโลยีคอมพิวเตอร์</h2>
+                <p>Computer Technology Department</p>
+            </div>
+        </div>
         <nav>
-            <a href="#">หน้าแรก</a>
-            <a href="#">เกี่ยวกับเรา</a>
-            <a href="#">หลักสูตร</a>
-            <a href="#">ติดต่อ</a>
+            <a href="#home">หน้าแรก</a>
+            <a href="#about">เกี่ยวกับเรา</a>
+            <a href="#courses">หลักสูตร</a>
+            <a href="#contact">ติดต่อ</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>มุ่งมั่นพัฒนา ทันสมัย ใส่ใจคุณภาพ</h1>
-        <p>ยกระดับการศึกษาด้วยเทคโนโลยีและนวัตกรรมแห่งอนาคต</p>
-        <a href="#" class="btn-gold">ดูหลักสูตรการเรียน</a>
+    <!-- ส่วนต้อนรับด้านบน -->
+    <section class="hero" id="home">
+        <h1>มุ่งสู่ความเป็นเลิศ ด้านนวัตกรรมดิจิทัล</h1>
+        <p>สร้างทักษะแห่งอนาคตด้วยหลักสูตรที่ทันสมัย พร้อมสู่การเป็นผู้เชี่ยวชาญด้านเทคโนโลยีอย่างมืออาชีพ</p>
+        <a href="#courses" class="btn-gold">ดูหลักสูตรการเรียน</a>
     </section>
 
-    <div class="container">
-        <h2 class="section-title">หลักสูตรที่เปิดสอน</h2>
+    <!-- ส่วนจุดเด่น -->
+    <div class="container" id="about">
+        <h2 class="section-title">จุดเด่นของแผนกวิชา</h2>
         <div class="grid">
             <div class="card">
-                <h3>ระดับ ปวช.</h3>
-                <p>เน้นปูพื้นฐานทักษะวิชาชีพ ความรู้พื้นฐานด้านเทคโนโลยีและการปฏิบัติจริง</p>
+                <div class="card-icon">💻</div>
+                <h3>อุปกรณ์ทันสมัย</h3>
+                <p>ห้องปฏิบัติการคอมพิวเตอร์พร้อมเครื่องมือ ซอฟต์แวร์ และระบบเครือข่ายมาตรฐานอุตสาหกรรม</p>
             </div>
             <div class="card">
-                <h3>ระดับ ปวส.</h3>
-                <p>ต่อยอดความเชี่ยวชาญเฉพาะทาง พร้อมเข้าสู่ตลาดแรงงานและภาคอุตสาหกรรม</p>
+                <div class="card-icon">🎓</div>
+                <h3>คณาจารย์มืออาชีพ</h3>
+                <p>ถ่ายทอดความรู้และประสบการณ์ตรงจากผู้เชี่ยวชาญในสายงานเทคโนโลยีสารสนเทศ</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>เน้นการปฏิบัติจริง</h3>
+                <p>ฝึกฝนการสร้างสรรค์ผลงาน เตรียมความพร้อมสู่การทำงานจริงและการศึกษาต่ออย่างมั่นใจ</p>
             </div>
         </div>
     </div>
 
-    <footer>
-        &copy; 2026 แผนกวิชาคอมพิวเตอร์ | สงวนลิขสิทธิ์
+    <!-- ส่วนหลักสูตร -->
+    <div class="container" id="courses">
+        <h2 class="section-title">หลักสูตรที่เปิดสอน</h2>
+        <div class="grid">
+            <div class="card" style="border-top-color: #D4AF37;">
+                <h3>ระดับ ปวช. (ประกาศนียบัตรวิชาชีพ)</h3>
+                <p>เน้นปูพื้นฐานงานระบบคอมพิวเตอร์ การเขียนโปรแกรมเบื้องต้น ระบบเครือข่าย และการซ่อมบำรุง</p>
+            </div>
+            <div class="card" style="border-top-color: #1E3A8A;">
+                <h3>ระดับ ปวส. (ประกาศนียบัตรวิชาชีพชั้นสูง)</h3>
+                <p>เจาะลึกการพัฒนาซอฟต์แวร์ เว็บแอปพลิเคชัน ระบบเครือข่ายขั้นสูง และเทคโนโลยีคลาวด์</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ส่วนท้ายเว็บ -->
+    <footer id="contact">
+        <p><strong>แผนกวิชาเทคโนโลยีคอมพิวเตอร์</strong> | Computer Tech</p>
+        <p>อีเมล: computertech@school.ac.th | โทรศัพท์: 02-123-4567</p>
+        <p>&copy; 2026 สงวนลิขสิทธิ์โดย แผนกวิชาเทคโนโลยีคอมพิวเตอร์</p>
     </footer>
 
 </body>
